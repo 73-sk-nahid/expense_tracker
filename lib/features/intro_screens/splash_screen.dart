@@ -1,4 +1,6 @@
-import 'package:expense_tracker/features/auth/ui/screens/login_screen.dart';
+import 'package:expense_tracker/features/auth/ui/screens/forgot_password_screen.dart';
+import 'package:expense_tracker/features/auth/ui/screens/reset_password_screen.dart';
+import 'package:expense_tracker/features/auth/ui/screens/set_app_pin.dart';
 import 'package:expense_tracker/features/intro_screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -28,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Future.delayed(composition.duration, () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const OnboardingScreen()),
+                    MaterialPageRoute(builder: (context) => const SetAppPin()),
                   );
                 });
               },

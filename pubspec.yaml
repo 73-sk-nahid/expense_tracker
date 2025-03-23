@@ -15,6 +15,7 @@ dependencies:
   get:
   smooth_page_indicator:
   lottie:
+  pin_code_fields:
 
 dev_dependencies:
   flutter_test:
