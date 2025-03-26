@@ -5,11 +5,13 @@ import 'package:expense_tracker/features/auth/ui/screens/login_screen.dart';
 import 'package:expense_tracker/features/auth/ui/screens/otp_verification_screen.dart';
 import 'package:expense_tracker/features/auth/ui/screens/reset_password_screen.dart';
 import 'package:expense_tracker/features/auth/ui/screens/set_app_pin.dart';
+import 'package:expense_tracker/features/home/ui/screens/home_screen.dart';
 import 'package:expense_tracker/features/intro_screens/setup_account_screen.dart';
 import 'package:expense_tracker/features/auth/ui/screens/signup_screen.dart';
 import 'package:expense_tracker/features/intro_screens/onboarding_screen.dart';
 import 'package:expense_tracker/features/intro_screens/splash_screen.dart';
 import 'package:expense_tracker/features/setup_account/ui/screens/add_new_account_screen.dart';
+import 'package:expense_tracker/features/setup_account/ui/screens/setup_success.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -55,9 +57,14 @@ class ExpenseTracker extends StatelessWidget {
         else if(setting.name == SetupAccountScreen.name) {
           widget = const SetupAccountScreen();
         }
-
         else if(setting.name == AddNewAccountScreen.name) {
           widget = const AddNewAccountScreen();
+        }
+        else if(setting.name == SetupSuccess.name) {
+          widget = const SetupSuccess();
+        }
+        else if(setting.name == HomeScreen.name) {
+          widget = const HomeScreen();
         }
         return MaterialPageRoute(builder: (ctx) {
           return widget;
