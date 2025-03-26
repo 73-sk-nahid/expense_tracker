@@ -1,4 +1,5 @@
 import 'package:expense_tracker/app/app_colors.dart';
+import 'package:expense_tracker/features/auth/ui/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -98,29 +99,13 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ],
                 ),
-
-
-                /*RichText(
-                  text: TextSpan(
-                      text: 'By signing up, your agree to the ',
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyMedium,
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'Terms of Services and Privacy Policy',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyMedium
-                              ?.copyWith(color: AppColors.themeColor),
-                        )
-                      ]),
-                ),*/
                 const SizedBox(
                   height: 24,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, LoginScreen.name);
+                  },
                   child: Text('Sign Up'),
                 ),
                 const SizedBox(

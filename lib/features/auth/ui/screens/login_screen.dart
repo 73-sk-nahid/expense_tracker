@@ -1,4 +1,5 @@
 import 'package:expense_tracker/app/app_colors.dart';
+import 'package:expense_tracker/features/auth/ui/screens/set_app_pin.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         title: Text(
           'Login',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+          style: Theme.of(context).textTheme.titleMedium,
         ),
       ),
       body: SingleChildScrollView(
@@ -62,7 +63,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 24,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => SetAppPin(title: 'Let\'s setup your PIN',)),
+                    );
+                  },
                   child: Text('Login'),
                 ),
                 const SizedBox(

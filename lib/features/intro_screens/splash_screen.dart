@@ -1,7 +1,6 @@
-import 'package:expense_tracker/features/auth/ui/screens/forgot_password_screen.dart';
-import 'package:expense_tracker/features/auth/ui/screens/reset_password_screen.dart';
-import 'package:expense_tracker/features/auth/ui/screens/set_app_pin.dart';
-import 'package:expense_tracker/features/intro_screens/onboarding_screen.dart';
+import 'package:expense_tracker/features/auth/ui/screens/login_screen.dart';
+import 'package:expense_tracker/features/intro_screens/setup_account_screen.dart';
+import 'package:expense_tracker/features/setup_account/ui/screens/add_new_account_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -28,10 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
               repeat: false,
               onLoaded: (composition) {
                 Future.delayed(composition.duration, () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const SetAppPin()),
-                  );
+                  Navigator.pushNamed(context, AddNewAccountScreen.name);
                 });
               },
             ),
